@@ -1,0 +1,20 @@
+<!-- Formularul pentru căutarea specifică pe coloana "First Name" -->
+<form [formGroup]="searchForm">
+  <label for="firstNameSearch">Căutare după First Name:</label>
+  <input type="text" id="firstNameSearch" formControlName="firstNameSearch" placeholder="Caută nume...">
+</form>
+
+<!-- Tabelul DataTables -->
+<table datatable [dtOptions]="dtOptions" class="table table-striped table-bordered row-border hover" style="width:100%">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Avatar</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
