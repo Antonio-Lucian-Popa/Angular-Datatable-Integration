@@ -37,6 +37,7 @@ export class DatatableGenericComponent implements OnInit, AfterViewInit {
       lengthMenu: [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  // Permite selectarea a câte rânduri să fie afișate
       serverSide: true,  // Activează paginarea pe server
       processing: true,  // Afișează indicatorul de procesare
+      responsive: true,  // Activează modul responsive
       ajax: (dataTablesParameters: any, callback: any) => {
         const page = Math.ceil(dataTablesParameters.start / dataTablesParameters.length) + 1;
         let url = `https://reqres.in/api/users?page=${page}&per_page=${dataTablesParameters.length}`;
